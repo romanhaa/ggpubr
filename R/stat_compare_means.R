@@ -105,6 +105,7 @@ stat_compare_means <- function(mapping = NULL, data = NULL,
                      bracket.size = 0.3, step.increase = 0,
                      symnum.args = list(),
                      geom = "text", position = "identity",  na.rm = FALSE, show.legend = NA,
+                     extend_line = 0,
                     inherit.aes = TRUE, ...) {
 
   if(!is.null(comparisons)){
@@ -145,7 +146,7 @@ stat_compare_means <- function(mapping = NULL, data = NULL,
                           test = method, test.args = method.args,
                           step_increase = step.increase, size = bracket.size, textsize = size, color = color,
                           map_signif_level = map_signif_level, tip_length = tip.length,
-                          data = data, vjust = vjust)
+                          data = data, vjust = vjust, extend_line = extend_line)
   }
 
   else{
